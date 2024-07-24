@@ -37,3 +37,31 @@ Sample Output 3 :
 
 // code:
 
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, c;
+    int sum = 0, product = 1;
+
+    cin >> n >> c;
+
+
+    for (int i = 1; i <= n; i++)
+    {
+        sum += i;
+        product *= i;
+    }
+
+    if (c == 1) {
+        cout << sum;
+    }
+    else if (c == 2) {
+        cout << product;
+    }
+    else {
+        cout << -1;
+    }
+
+    return 0;
+}

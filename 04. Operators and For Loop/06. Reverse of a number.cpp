@@ -32,3 +32,27 @@ Sample Output 2 :
 
 // code:
 
+#include <iostream>
+#include <string>
+using namespace std;
+
+string reverse(string n) {
+    if (n.length() == 1) {
+        return n;
+    }
+
+    char lastDigit = n[n.size() - 1];
+    string remainDigits = n.substr(0, n.size() - 1);
+    
+    return lastDigit + reverse(remainDigits);
+}
+
+int main() {
+    string n;
+
+    cin >> n;
+
+	cout << stoi(reverse(n));
+    
+    return 0;
+}

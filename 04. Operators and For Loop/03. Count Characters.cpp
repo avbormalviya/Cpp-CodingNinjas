@@ -23,3 +23,37 @@ Number of white spaces : 2 (one space after abc and one newline after 4)
 */
 
 // code:
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    char n;
+
+    int chr = 0, num = 0, space = 0;
+
+    n = cin.get();
+
+    int i = 0;
+
+    while (n != '$')
+    {
+        int ascii = n;
+
+        if (ascii >= 65 && ascii <= 90 || ascii >= 97 && ascii <= 122) {
+            chr++;
+        }
+        else if (ascii >= 48 && ascii <= 57) {
+            num++;
+        }
+        else {
+            space++;
+        }
+
+        n = cin.get();
+    }
+
+    cout << chr << " " << num << " " << space;
+
+    return 0;
+}

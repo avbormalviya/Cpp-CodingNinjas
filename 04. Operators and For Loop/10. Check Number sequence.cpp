@@ -76,22 +76,3 @@ It is strictly decreasing first (8 7 6 5). Then it's strictly increasing (5 8). 
 */
 
 // code:
-
-// #include <iostream>
-// using namespace std;
-
-// int main() {
-//     char n;
-
-//     n = cin.get();
-
-//     int i = 0;
-
-//     while (n[i] != '$')
-//     {
-        
-//     }
-    
-
-    
-// }

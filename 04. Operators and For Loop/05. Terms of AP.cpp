@@ -33,3 +33,26 @@ Input is 4 and print the first 4 numbers that are not divisible by 4 and are of 
 
 // code:
 
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x;
+
+    cin >> x;
+
+    int n = 1;
+    int terms = 0;
+
+    while (terms < x)
+    {
+        if ((3 * n + 2) % 4 != 0) {
+            cout << 3 * n + 2 << " ";
+            terms++;
+        }
+
+        n++;
+    }
+    
+    return 0;
+}
