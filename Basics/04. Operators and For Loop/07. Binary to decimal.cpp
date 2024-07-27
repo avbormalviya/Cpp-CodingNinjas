@@ -31,8 +31,26 @@ Sample Output 2 :
 // code:
 
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 int main() {
-    
+    int n;
+
+    cin >> n;
+
+    int i = 0;
+    int lastDigit;
+    int decimal = 0;
+
+    while(n > 0) {
+        lastDigit = n % 10;
+        decimal += lastDigit * pow(2, i);
+        
+		i++;
+		n /= 10;
+    }
+
+    cout << decimal;
+    return 0;
 }

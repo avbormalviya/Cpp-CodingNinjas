@@ -32,3 +32,21 @@ Sample Output 2 :
 
 // code:
 
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+
+    cin >> n;
+
+    int output = 1;
+
+    while (output * output <= n)
+    {
+        output++;    
+    }
+    
+    cout << output - 1;
+    return 0;
+}
