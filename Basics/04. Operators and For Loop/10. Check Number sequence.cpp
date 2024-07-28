@@ -76,3 +76,43 @@ It is strictly decreasing first (8 7 6 5). Then it's strictly increasing (5 8). 
 */
 
 // code:
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, curr, prev;
+    bool dec = true, isValid = true;
+
+    cin >> n >> prev;
+
+    while (--n) {
+        cin >> curr;
+
+        if (curr == prev) {
+            isValid = false;
+            break;
+        }
+
+        else if (curr > prev) {
+            dec = false;
+        }
+
+        else if (curr < prev) {
+            if (!dec) {
+                isValid = false;
+                break;
+            }
+        }
+
+        prev = curr;
+    }
+
+    if (isValid)
+        cout << "true";
+    else 
+        cout << "false";
+
+    return 0;
+}
+

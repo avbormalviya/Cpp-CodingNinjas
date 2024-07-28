@@ -41,7 +41,7 @@ Sample Output 2 :
 // code:
 
 #include <iostream>
-#include <cmath>
+#include <string>
 using namespace std;
 
 int main() {
@@ -49,6 +49,23 @@ int main() {
 
     cin >> n;
 
-    
+    string binary = "";
+
+    while (n >= 0) {
+		if (n == 0 || n == 1) {
+			binary += to_string(n);
+			break;
+		}
+
+        binary += to_string(n % 2);
+        n /= 2;
+    }
+
+	for (int i = 0; i < binary.length() / 2; i++) {
+        swap(binary[i], binary[binary.length() - i - 1]);
+    }
+
+	cout << binary;
+
     return 0;
 }
